@@ -34,7 +34,32 @@
 // import Exercicio8_1 from './components/Exercicios/Exercicio8_1.vue'
 // import Exemplo09 from './components/Exemplo09Enter.vue'
 // import Exemplo10 from './components/Exemplo10Props.vue' (ta la em cima pq definiu o que vai em cada campo e colocou nome diferente)
-import Exercicio9_1 from './components/Exercicios/Exercicio9_1.vue'
+// import Exercicio9_1 from './components/Exercicios/Exercicio9_1.vue'
+import { ref } from 'vue'
+import Exercicio10_1 from './components/Exercicios/Exercicio10_1.vue'
+
+const produtos = ref([
+    { nome: 'Blush: Vizzela', price: 35.97 },
+    { nome: 'Balm: Ruby Rose Feels', price: 40.00 },
+    { nome: 'Rímel: Melu', price: 19.83 }
+])
+
+const mensagemCompra = ref('')
+
+function handleBuy(nomeProduto) {
+    const msg = `Você comprou ${nomeProduto}`
+    mensagemCompra.value = msg
+    console.log(msg)
+}
+
+// exemplo 11 (coisas necessárias)
+// import {ref} from 'vue'
+// import Exemplo11 from './components/Exemplo11Emits.vue'
+// const totalCliques = ref(0)
+
+// function atualiazarTotal(valor){
+//   totalCliques.value = valor
+// }
 
 </script>
 
@@ -65,6 +90,18 @@ import Exercicio9_1 from './components/Exercicios/Exercicio9_1.vue'
   <!-- <Exemplo10> </Exemplo10> o de baixo aí, só que definindo o q vai em cada campo (do card) -->
   <UserCard nome="Bianca" email="bianca@gmail.com" idade="17" telefone="11928739471" Inativo="False"></UserCard>
   <Exercicio9_1 title="Stuart" price="Doação" image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwFpQ_7rXdlBDeBE6VCYf-S7wQNBR2hU0udQ&s" :disponivel="true"></Exercicio9_1>
-  
+  <Exemplo11 @update="atualiazarTotal"></Exemplo11>
+  <!-- <p>Total de cliques: {{ totalCliques }}</p> -->
 
+  <h2>Produtos</h2>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <Exercicio10_1
+            v-for="(produto, i) in produtos"
+            :key="produto.nome + i"
+            :nome="produto.nome"
+            :price="produto.price"
+            @buy="handleBuy"
+        />
+    </div>
+    <p v-if="mensagemCompra" style="font-weight: bold; color: #e0aaff; margin-top: 1rem;">{{ mensagemCompra }}</p>
 </template>
