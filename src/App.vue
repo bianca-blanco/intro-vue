@@ -1,0 +1,70 @@
+
+<script setup>
+
+// import UserCard from './components/Exemplo10Props.vue'
+//   const user = {
+//     nome: String,
+//     email: String,
+//     idade: Number,
+//     telefone: String,
+//     ativo: Boolean
+//   }
+
+// import Exemplo01 from './components/Exemplo01Interpolacao.vue'
+// import Exemplo1_1 from './components/Exercicios/Exercício1_1.vue'
+// import Exemplo1_2 from './components/Exercicios/Exercicio1_2.vue'
+// import Exemplo1_3 from './components/Exercicios/Exercicio1_3.vue'
+// import Exemplo02 from './components/Exemplo02Condicional.vue';
+// import Exemplo2_1 from './components/Exercicios/Exercicio2_1.vue';
+// import Exemplo2_2 from './components/Exercicios/Exercicio2_2.vue';
+// import Exemplo03For from './components/Exemplo03For.vue';
+// import Exemplo03For from './components/Exemplo03For.vue';
+// import Exercicio3_1 from './components/Exercicios/Exercicio3_1.vue'
+// import Exercicio3_2 from './components/Exercicios/Exercicio3_2.vue'
+// import Exemplo04 from './components/Exemplo04HTML.vue'
+// import Exercicio4_1 from './components/Exercicios/Exercicio4_1.vue'
+// import Exemplo05 from './components/Exemplo05Model.vue'
+// import Exercicio5_1 from './components/Exercicios/Exercicio5_1.vue'
+// import Exercicio5_2 from './components/Exercicios/Exercicio5_2.vue'
+// import Exemplo06 from './components/Exemplo06Classe.vue'
+// import Exercicio6_1 from './components/Exercicios/Exercicio6_1.vue'
+// import Exemplo07 from './components/Exemplo07Clique.vue'
+// import Exercicio7_1 from './components/Exercicios/Exercicio7_1.vue'
+// import Exemplo08 from './components/Exemplo08Teclado.vue'
+// import Exercicio8_1 from './components/Exercicios/Exercicio8_1.vue'
+// import Exemplo09 from './components/Exemplo09Enter.vue'
+// import Exemplo10 from './components/Exemplo10Props.vue' (ta la em cima pq definiu o que vai em cada campo e colocou nome diferente)
+import Exercicio9_1 from './components/Exercicios/Exercicio9_1.vue'
+
+</script>
+
+
+<template>
+  <Exemplo01> </Exemplo01>
+  <Exemplo1_1> </Exemplo1_1>
+  <Exemplo1_2> </Exemplo1_2>
+  <Exemplo1_3> </Exemplo1_3>
+  <Exemplo02> </Exemplo02>
+  <Exemplo2_1> </Exemplo2_1>
+  <Exemplo2_2></Exemplo2_2>
+  <Exemplo03For> </Exemplo03For>
+  <Exercicio3_1> </Exercicio3_1>
+  <Exercicio3_2> </Exercicio3_2>
+  <Exemplo04> </Exemplo04>
+  <Exercicio4_1> </Exercicio4_1>
+  <Exemplo05> </Exemplo05>
+  <Exercicio5_1> </Exercicio5_1>
+  <Exercicio5_2> </Exercicio5_2>
+  <Exemplo06> </Exemplo06>
+  <Exercicio6_1> </Exercicio6_1>
+  <Exemplo07> </Exemplo07>
+  <Exercicio7_1> </Exercicio7_1>
+  <Exemplo08> </Exemplo08>
+  <Exercicio8_1> </Exercicio8_1>
+  <Exemplo09> </Exemplo09>
+  <!-- <Exemplo10> </Exemplo10> o de baixo aí, só que definindo o q vai em cada campo (do card) -->
+  <UserCard nome="Bianca" email="bianca@gmail.com" idade="17" telefone="11928739471" Inativo="False"></UserCard>
+  <Exercicio9_1 title="Stuart" price="Doação" image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwFpQ_7rXdlBDeBE6VCYf-S7wQNBR2hU0udQ&s" :disponivel="true"></Exercicio9_1>
+  
+
+</template>
