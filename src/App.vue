@@ -35,22 +35,26 @@
 // import Exemplo09 from './components/Exemplo09Enter.vue'
 // import Exemplo10 from './components/Exemplo10Props.vue' (ta la em cima pq definiu o que vai em cada campo e colocou nome diferente)
 // import Exercicio9_1 from './components/Exercicios/Exercicio9_1.vue'
-import { ref } from 'vue'
-import Exercicio10_1 from './components/Exercicios/Exercicio10_1.vue'
+// import Pesquisa from './components/Pesquisa.vue'
+// import Baselayout from './Baselayout.vue';
+import BaseLayout from './components/BaseLayout.vue'
 
-const produtos = ref([
-    { nome: 'Blush: Vizzela', price: 35.97 },
-    { nome: 'Balm: Ruby Rose Feels', price: 40.00 },
-    { nome: 'Rímel: Melu', price: 19.83 }
-])
+// import { ref } from 'vue'
+// import Exercicio10_1 from './components/Exercicios/Exercicio10_1.vue'
 
-const mensagemCompra = ref('')
+// const produtos = ref([
+//     { nome: 'Blush: Vizzela', price: 35.97 },
+//     { nome: 'Balm: Ruby Rose Feels', price: 40.00 },
+//     { nome: 'Rímel: Melu', price: 19.83 }
+// ])
 
-function handleBuy(nomeProduto) {
-    const msg = `Você comprou ${nomeProduto}`
-    mensagemCompra.value = msg
-    console.log(msg)
-}
+// const mensagemCompra = ref('')
+
+// function handleBuy(nomeProduto) {
+//     const msg = `Você comprou ${nomeProduto}`
+//     mensagemCompra.value = msg
+//     console.log(msg)
+// }
 
 // exemplo 11 (coisas necessárias)
 // import {ref} from 'vue'
@@ -88,11 +92,11 @@ function handleBuy(nomeProduto) {
   <Exercicio8_1> </Exercicio8_1>
   <Exemplo09> </Exemplo09>
   <!-- <Exemplo10> </Exemplo10> o de baixo aí, só que definindo o q vai em cada campo (do card) -->
-  <UserCard nome="Bianca" email="bianca@gmail.com" idade="17" telefone="11928739471" Inativo="False"></UserCard>
-  <Exercicio9_1 title="Stuart" price="Doação" image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwFpQ_7rXdlBDeBE6VCYf-S7wQNBR2hU0udQ&s" :disponivel="true"></Exercicio9_1>
-  <Exemplo11 @update="atualiazarTotal"></Exemplo11>
+  <!-- <UserCard nome="Bianca" email="bianca@gmail.com" idade="17" telefone="11928739471" Inativo="False"></UserCard>
+  <Exercicio9_1 title="Stuart" price="Doação" image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwFpQ_7rXdlBDeBE6VCYf-S7wQNBR2hU0udQ&s" :disponivel="true"></Exercicio9_1> -->
+  <!-- <Exemplo11 @update="atualiazarTotal"></Exemplo11> -->
   <!-- <p>Total de cliques: {{ totalCliques }}</p> -->
-
+<!-- 
   <h2>Produtos</h2>
     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
         <Exercicio10_1
@@ -103,5 +107,49 @@ function handleBuy(nomeProduto) {
             @buy="handleBuy"
         />
     </div>
-    <p v-if="mensagemCompra" style="font-weight: bold; color: #e0aaff; margin-top: 1rem;">{{ mensagemCompra }}</p>
+    <p v-if="mensagemCompra" style="font-weight: bold; color: #e0aaff; margin-top: 1rem;">{{ mensagemCompra }}</p> -->
+<Pesquisa> </Pesquisa>
+    <PesquisaSlots>
+  <!-- Exemplo do w3schools -->
+  <!-- <cardSlot>
+  <div>
+    <h3>Slots Vue</h3>
+    <p>Slots são áreas definidas em um componente filho onde o componente pai pode inserir seu próprio conteúdo.
+</p>
+    <slot-comp>Bianca Blanco</slot-comp>
+  </div>
+  </cardSlot> -->
+  <!-- O conteúdo dentro de <Card> será colocado no slot -->
+</PesquisaSlots>
+
+ <BaseLayout>
+    <template #header>
+      <h1>Aqui nós temos um título</h1>
+    </template>
+
+    <template #default>
+      <p>Um parágrafo de texto.</p>
+      <p>E um conteúdo adicional.</p>
+    </template>
+
+    <template #footer>
+      <p>Aqui tem informações que normalmente se tem em rodapé</p>
+    </template>
+  </BaseLayout>
+
 </template>
+
+<!-- Slots normal -->
+<!-- <style>
+  p {
+    width: 200px;
+  }
+  #app div {
+    border: dashed black 1px;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+  }
+</style>
+
+ -->
